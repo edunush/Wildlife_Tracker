@@ -1,0 +1,26 @@
+body {
+  background image:
+  background-color: #d7e7f4;
+  color: #428bca;
+}
+
+button {
+  background-color: #8bca42;
+  margin: 10px;
+}
+
+.navbar {
+  margin-top: 20px;
+}
+
+.form {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.image {
+  position: relative;
+  display: block;
+  margin: auto;
+  max-height: 400px;
+}

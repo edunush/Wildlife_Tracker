@@ -1,0 +1,35 @@
+<!--animal.vtl-->
+  <nav class="navbar navbar-light">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="/animal/new">Add Animal</a></li>
+      <li><a href="/animals">All Animals</a></li>
+      <li><a href="/sighting">Post Sighting</li>
+    </ol>
+  </nav>
+  <div>
+    <center>
+      <h1>$animal.getName()</h1>
+      <h3>ID: $animal.getId()</h3>
+        #if($animal.getSightings().size() == 0)
+            <p>No sightings of $animal.getName() have been reported.</p>
+        #else
+          #if($animal.getEndangered == true)
+            #foreach($sighting in $animal.getSightings())
+            <strong>Location:</strong> $sighting.getLocation()
+            </br><strong>Health:</strong> $animal.getHealth()
+            </br><strong>Age:</strong> $animal.getAge()
+            </br><strong>Reported by:</strong> $sighting.getRangerName()
+            </br><strong>ID:</strong> $sighting.getId()
+            #end
+          #else
+            #foreach($sighting in $animal.getSightings())
+            <strong>Location:</strong> $sighting.getLocation()
+            </br><strong>Reported by:</strong> $sighting.getRangerName()
+            </br><strong>ID:</strong> $sighting.getId()
+            #end
+          #end
+        #end
+    </center>
+  </div>
+<!--animal.vtl-->
